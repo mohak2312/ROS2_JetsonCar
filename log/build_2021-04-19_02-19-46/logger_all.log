@@ -1,0 +1,121 @@
+[5.299s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'robosim']
+[5.299s] DEBUG:colcon:Parsed command line arguments: Namespace(ament_cmake_args=None, base_paths=['.'], build_base='build', catkin_cmake_args=None, catkin_skip_building_tests=False, cmake_args=None, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, cmake_target=None, cmake_target_skip_unavailable=False, continue_on_error=False, event_handlers=None, executor='parallel', ignore_user_meta=False, install_base='install', log_base=None, log_level=None, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f7c9c6780>>, merge_install=False, metas=['./colcon.meta'], packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_end=None, packages_ignore=None, packages_ignore_regex=None, packages_select=['robosim'], packages_select_build_failed=False, packages_select_by_dep=None, packages_select_regex=None, packages_select_test_failures=False, packages_skip=None, packages_skip_build_finished=False, packages_skip_by_dep=None, packages_skip_regex=None, packages_skip_test_passed=False, packages_skip_up_to=None, packages_start=None, packages_up_to=None, packages_up_to_regex=None, parallel_workers=4, paths=None, symlink_install=False, test_result_base=None, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f7c9c6780>, verb_name='build', verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f7c9c6b00>)
+[5.395s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[5.395s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[5.395s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[5.396s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[5.396s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[5.397s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[5.398s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/mohak2312/ROS2_JetsonCar'
+[5.398s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[5.399s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[5.399s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[5.399s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[5.399s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[5.400s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[5.400s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[5.400s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[5.400s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[5.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[5.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[5.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[5.544s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[5.545s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[5.545s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[5.546s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[5.546s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[5.548s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[5.548s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[5.549s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[5.549s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[5.550s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[5.550s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[5.550s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[5.551s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[5.551s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[5.551s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[5.552s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[5.552s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[5.552s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[5.552s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[5.553s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[5.553s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[5.554s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[5.554s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[5.554s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[5.555s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[5.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/robosim) by extensions ['ignore', 'ignore_ament_install']
+[5.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/robosim) by extension 'ignore'
+[5.557s] Level 1:colcon.colcon_core.package_identification:_identify(src/robosim) by extension 'ignore_ament_install'
+[5.557s] Level 1:colcon.colcon_core.package_identification:_identify(src/robosim) by extensions ['colcon_pkg']
+[5.557s] Level 1:colcon.colcon_core.package_identification:_identify(src/robosim) by extension 'colcon_pkg'
+[5.557s] Level 1:colcon.colcon_core.package_identification:_identify(src/robosim) by extensions ['colcon_meta']
+[5.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/robosim) by extension 'colcon_meta'
+[5.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/robosim) by extensions ['ros']
+[5.558s] Level 1:colcon.colcon_core.package_identification:_identify(src/robosim) by extension 'ros'
+[5.580s] DEBUG:colcon.colcon_core.package_identification:Package 'src/robosim' with type 'ros.ament_python' and name 'robosim'
+[5.581s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[5.582s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[5.582s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[5.582s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[5.582s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[5.840s] Level 5:colcon.colcon_core.verb:set package 'robosim' build argument 'cmake_args' from command line to 'None'
+[5.840s] Level 5:colcon.colcon_core.verb:set package 'robosim' build argument 'cmake_target' from command line to 'None'
+[5.841s] Level 5:colcon.colcon_core.verb:set package 'robosim' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[5.841s] Level 5:colcon.colcon_core.verb:set package 'robosim' build argument 'cmake_clean_cache' from command line to 'False'
+[5.841s] Level 5:colcon.colcon_core.verb:set package 'robosim' build argument 'cmake_clean_first' from command line to 'False'
+[5.841s] Level 5:colcon.colcon_core.verb:set package 'robosim' build argument 'cmake_force_configure' from command line to 'False'
+[5.841s] Level 5:colcon.colcon_core.verb:set package 'robosim' build argument 'ament_cmake_args' from command line to 'None'
+[5.842s] Level 5:colcon.colcon_core.verb:set package 'robosim' build argument 'catkin_cmake_args' from command line to 'None'
+[5.842s] Level 5:colcon.colcon_core.verb:set package 'robosim' build argument 'catkin_skip_building_tests' from command line to 'False'
+[5.842s] DEBUG:colcon.colcon_core.verb:Building package 'robosim' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/mohak2312/ROS2_JetsonCar/build/robosim', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/mohak2312/ROS2_JetsonCar/install/robosim', 'merge_install': False, 'path': '/home/mohak2312/ROS2_JetsonCar/src/robosim', 'symlink_install': False, 'test_result_base': None}
+[5.845s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[5.861s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[5.862s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/mohak2312/ROS2_JetsonCar/src/robosim' with build type 'ament_python'
+[5.863s] Level 1:colcon.colcon_core.shell:create_environment_hook('robosim', 'ament_prefix_path')
+[5.922s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[5.924s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/hook/ament_prefix_path.ps1'
+[5.933s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/hook/ament_prefix_path.dsv'
+[5.936s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/hook/ament_prefix_path.sh'
+[5.946s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[5.946s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.555s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/mohak2312/ROS2_JetsonCar/src/robosim'
+[10.560s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[10.561s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[10.756s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/mohak2312/ROS2_JetsonCar/src/robosim': PYTHONPATH=/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robosim build --build-base /home/mohak2312/ROS2_JetsonCar/build/robosim/build install --prefix /home/mohak2312/ROS2_JetsonCar/install/robosim --record /home/mohak2312/ROS2_JetsonCar/build/robosim/install.log --single-version-externally-managed
+[14.392s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/mohak2312/ROS2_JetsonCar/src/robosim' returned '0': PYTHONPATH=/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robosim build --build-base /home/mohak2312/ROS2_JetsonCar/build/robosim/build install --prefix /home/mohak2312/ROS2_JetsonCar/install/robosim --record /home/mohak2312/ROS2_JetsonCar/build/robosim/install.log --single-version-externally-managed
+[14.442s] Level 1:colcon.colcon_core.environment:checking '/home/mohak2312/ROS2_JetsonCar/install/robosim' for CMake module files
+[14.445s] Level 1:colcon.colcon_core.environment:checking '/home/mohak2312/ROS2_JetsonCar/install/robosim' for CMake config files
+[14.449s] Level 1:colcon.colcon_core.environment:checking '/home/mohak2312/ROS2_JetsonCar/install/robosim/lib'
+[14.450s] Level 1:colcon.colcon_core.environment:checking '/home/mohak2312/ROS2_JetsonCar/install/robosim/bin'
+[14.451s] Level 1:colcon.colcon_core.environment:checking '/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/pkgconfig/robosim.pc'
+[14.451s] Level 1:colcon.colcon_core.environment:checking '/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages'
+[14.451s] Level 1:colcon.colcon_core.shell:create_environment_hook('robosim', 'pythonpath')
+[14.456s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/hook/pythonpath.ps1'
+[14.459s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/hook/pythonpath.dsv'
+[14.461s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/hook/pythonpath.sh'
+[14.463s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(robosim)
+[14.469s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/package.ps1'
+[14.475s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/package.dsv'
+[14.478s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/package.sh'
+[14.483s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/package.bash'
+[14.489s] INFO:colcon.colcon_core.shell:Creating package script '/home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim/package.zsh'
+[14.495s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/mohak2312/ROS2_JetsonCar/install/robosim/share/colcon-core/packages/robosim)
+[14.496s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[14.498s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[14.498s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[14.499s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[14.609s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[14.609s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[14.610s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[14.704s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[14.711s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mohak2312/ROS2_JetsonCar/install/local_setup.ps1'
+[14.718s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mohak2312/ROS2_JetsonCar/install/_local_setup_util_ps1.py'
+[14.730s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mohak2312/ROS2_JetsonCar/install/setup.ps1'
+[14.818s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mohak2312/ROS2_JetsonCar/install/local_setup.sh'
+[14.823s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/mohak2312/ROS2_JetsonCar/install/_local_setup_util_sh.py'
+[14.825s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mohak2312/ROS2_JetsonCar/install/setup.sh'
+[14.909s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mohak2312/ROS2_JetsonCar/install/local_setup.bash'
+[14.912s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mohak2312/ROS2_JetsonCar/install/setup.bash'
+[14.992s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/mohak2312/ROS2_JetsonCar/install/local_setup.zsh'
+[14.995s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/mohak2312/ROS2_JetsonCar/install/setup.zsh'

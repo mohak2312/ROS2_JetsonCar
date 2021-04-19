@@ -1,0 +1,4 @@
+[console_scripts]
+listener = robosim.robot_simulator:main
+talker = robosim.robot_controller:main
+
