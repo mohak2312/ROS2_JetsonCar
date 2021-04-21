@@ -43,34 +43,34 @@ class RobotController(Node):
         self.linear_y= 0.0
         self.angular_z= 0.0
         self.current=set()
-        self.last_linear_x = -0.4
+        self.last_linear_x = -0.44
 
     def KeyboardReader(self):
         @with_goto
         def on_press(key):
-            #self.get_logger().info("Starting 2")
-            self.angular_z= 0.0 # nutral position
+            
+            self.angular_z= 90.0 # nutral position
             self.linear_x = self.last_linear_x # hold last speed
             self.current.add(key)
             if self.current == forward:
-                self.linear_x = -0.2 #constant forward speed
+                self.linear_x = -0.3 #constant forward speed
                 goto .end
             if self.current == reverse:
                 self.linear_x = -0.48 #constant reverse speed
                 goto .end
             if self.current == left:
-                self.angular_z= -1.0
+                self.angular_z= 179.0
                 goto .end
             if self.current == right:
                 self.angular_z= 1.0
                 goto .end
             if self.current == speed_up:
-                if self.linear_x < 0.0:    #max forward speed limit
+                if self.linear_x < -0.21:    #max forward speed limit
                     self.linear_x += 0.001
                 self.last_linear_x =self.linear_x 
                 goto .end
             if self.current == speed_down:
-                if self.linear_x > -0.5:   #max reverse speed limit
+                if self.linear_x > -0.49:   #max reverse speed limit
                     self.linear_x -= 0.001
                 self.last_linear_x =self.linear_x 
                 goto .end
@@ -78,16 +78,16 @@ class RobotController(Node):
                 last_linear_x = self.linear_x 
                 goto .end
             if self.current == turn_left_forward:
-                self.linear_x = -0.2 #constant forward speed
-                self.angular_z= -1.0
+                self.linear_x = -0.3 #constant forward speed
+                self.angular_z= 179.0
                 goto .end
             if self.current == turn_right_forward:
-                self.linear_x = -0.2 #constant forward speed
+                self.linear_x = -0.3 #constant forward speed
                 self.angular_z= 1.0
                 goto .end
             if self.current == turn_left_reverse:
                 self.linear_x = -0.48 #constant reverse speed
-                self.angular_z= -1.0
+                self.angular_z= 179.0
                 goto .end
             if self.current == turn_right_reverse:
                 self.linear_x = -0.48 #constant reverse speed
@@ -98,23 +98,24 @@ class RobotController(Node):
                 return False
             self.last_linear_x= -0.4 # nutral position if no key press
             label .end
+            self.last_linear_x =self.linear_x 
             cmd = Twist()
             cmd.linear.x = self.linear_x
-            cmd.linear.y = self.linear_y
             cmd.angular.z = self.angular_z
             self.publisher_.publish(cmd)
-            self.get_logger().info('Publishing: "%s"' % cmd)
+            self.get_logger().info('Speed: "%s" ----- Turn: "%s"' % (cmd.linear.x,cmd.angular.z))
+
         def on_release(key):
             try:
                 self.current.remove(key)
             except KeyError:
                 pass
             
-        self.get_logger().info("Starting 0")
+        
         # Collect events until released
         with keyboard.Listener(
                 on_press=on_press,on_release=on_release) as listener:
-            self.get_logger().info("Starting 1")
+            
             listener.join()
 
 def main(args=None):

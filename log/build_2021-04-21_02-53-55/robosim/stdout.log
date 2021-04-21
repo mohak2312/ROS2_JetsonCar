@@ -1,0 +1,24 @@
+running egg_info
+writing ../../build/robosim/robosim.egg-info/PKG-INFO
+writing dependency_links to ../../build/robosim/robosim.egg-info/dependency_links.txt
+writing entry points to ../../build/robosim/robosim.egg-info/entry_points.txt
+writing requirements to ../../build/robosim/robosim.egg-info/requires.txt
+writing top-level names to ../../build/robosim/robosim.egg-info/top_level.txt
+reading manifest file '../../build/robosim/robosim.egg-info/SOURCES.txt'
+writing manifest file '../../build/robosim/robosim.egg-info/SOURCES.txt'
+running build
+running build_py
+copying robosim/robot_simulator.py -> /home/mohak2312/ROS2_JetsonCar/build/robosim/build/lib/robosim
+running install
+running install_lib
+copying /home/mohak2312/ROS2_JetsonCar/build/robosim/build/lib/robosim/robot_simulator.py -> /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim
+byte-compiling /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim/robot_simulator.py to robot_simulator.cpython-36.pyc
+running install_data
+copying package.xml -> /home/mohak2312/ROS2_JetsonCar/install/robosim/share/robosim
+running install_egg_info
+removing '/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim-0.0.0-py3.6.egg-info' (and everything under it)
+Copying ../../build/robosim/robosim.egg-info to /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim-0.0.0-py3.6.egg-info
+running install_scripts
+Installing listener script to /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/robosim
+Installing talker script to /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/robosim
+writing list of installed files to '/home/mohak2312/ROS2_JetsonCar/build/robosim/install.log'

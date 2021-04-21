@@ -1,0 +1,9 @@
+/home/mohak2312/.local/lib/python3.6/site-packages/setuptools/dist.py:645: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+  % (opt, underscore_opt))
+/home/mohak2312/.local/lib/python3.6/site-packages/setuptools/dist.py:645: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead
+  % (opt, underscore_opt))
+  File "/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim/robot_simulator.py", line 43
+    self.get_logger().info(....'WARNING....:Over Limit.....Speed: "%s" ----- Turn: "%s"' % cmd.linear.x %cmd.angular.z)
+                                                                                       ^
+SyntaxError: invalid syntax
+
