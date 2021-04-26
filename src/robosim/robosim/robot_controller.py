@@ -18,6 +18,7 @@ from rclpy.node import Node
 from geometry_msgs.msg import Twist
 from pynput import keyboard
 from goto import with_goto
+import time
 
 #motion combinations
 forward=set({keyboard.Key.up})
@@ -43,71 +44,117 @@ class RobotController(Node):
         self.linear_y= 0.0
         self.angular_z= 0.0
         self.current=set()
-        self.last_linear_x = -0.44
+        self.last_linear_x = -0.4
+        self.reverse_flag=True
+        self.forward_flag=True
+        self.auto_hold_flag=False
+        self.get_logger().info('|--------------- Start Talking (-_-) ---------------|')
 
     def KeyboardReader(self):
+
+        def send_cmd(speed,turn):
+            cmd = Twist()
+            cmd.linear.x = speed
+            cmd.angular.z = turn
+            self.publisher_.publish(cmd)
+            self.get_logger().info('Speed: "%s" ----- Turn: "%s"' % (cmd.linear.x,cmd.angular.z))
+        
         @with_goto
         def on_press(key):
             
-            self.angular_z= 90.0 # nutral position
-            self.linear_x = self.last_linear_x # hold last speed
             self.current.add(key)
+            
             if self.current == forward:
-                self.linear_x = -0.3 #constant forward speed
+                self.reverse_flag=True
+                if self.auto_hold_flag:
+                    send_cmd(self.linear_x,90.0)
+                else:
+                    self.linear_x= -0.27
+                    send_cmd(self.linear_x,90.0)
                 goto .end
+
             if self.current == reverse:
-                self.linear_x = -0.48 #constant reverse speed
+                if  self.reverse_flag:
+                    send_cmd(-0.47,90.0)
+                    self.linear_x = -0.4
+                    #time.sleep(1)
+                else:
+                    if self.linear_x > -0.48:
+                        self.linear_x -= 0.005 
+                        send_cmd(self.linear_x,90.0)
+                    else:
+                        send_cmd(self.linear_x,90.0)
+                self.reverse_flag=False
                 goto .end
-            if self.current == left:
-                self.angular_z= 179.0
-                goto .end
-            if self.current == right:
-                self.angular_z= 1.0
-                goto .end
+            
             if self.current == speed_up:
-                if self.linear_x < -0.21:    #max forward speed limit
-                    self.linear_x += 0.001
-                self.last_linear_x =self.linear_x 
+                self.linear_x += 0.005
+                send_cmd(self.linear_x,90.0)
+                self.auto_hold_flag=False
                 goto .end
+
             if self.current == speed_down:
-                if self.linear_x > -0.49:   #max reverse speed limit
-                    self.linear_x -= 0.001
-                self.last_linear_x =self.linear_x 
+                self.linear_x -= 0.005
+                send_cmd(self.linear_x,90.0)
+                self.auto_hold_flag=False
                 goto .end
+
             if self.current == auto_speed_hold:
-                last_linear_x = self.linear_x 
+                send_cmd(self.linear_x,90.0)
+                self.auto_hold_flag=True
                 goto .end
+
             if self.current == turn_left_forward:
-                self.linear_x = -0.3 #constant forward speed
-                self.angular_z= 179.0
+                self.reverse_flag=True
+                send_cmd(-0.27,180.0)
                 goto .end
+            
             if self.current == turn_right_forward:
-                self.linear_x = -0.3 #constant forward speed
-                self.angular_z= 1.0
+                self.reverse_flag=True
+                send_cmd(-0.27,0.0)
                 goto .end
+
             if self.current == turn_left_reverse:
-                self.linear_x = -0.48 #constant reverse speed
-                self.angular_z= 179.0
+                if  self.reverse_flag:
+                    send_cmd(-0.47,90.0)
+                    self.linear_x = -0.4
+                    #time.sleep(1)
+                else:
+                    if self.linear_x > -0.48:
+                        self.linear_x -= 0.005 
+                        send_cmd(self.linear_x,180.0)
+                    else:
+                        send_cmd(self.linear_x,180.0)
+                self.reverse_flag=False
                 goto .end
+            
             if self.current == turn_right_reverse:
-                self.linear_x = -0.48 #constant reverse speed
-                self.angular_z= 1.0
+                if  self.reverse_flag:
+                    send_cmd(-0.47,90.0)
+                    self.linear_x = -0.4
+                    #time.sleep(1)
+                else:
+                    if self.linear_x > -0.48:
+                        self.linear_x -= 0.005 
+                        send_cmd(self.linear_x,0.0)
+                    else:
+                        send_cmd(self.linear_x,0.0)
+                self.reverse_flag=False
                 goto .end
-            if key == keyboard.Key.esc:
-                # Stop listener
-                return False
-            self.last_linear_x= -0.4 # nutral position if no key press
+
+
             label .end
-            self.last_linear_x =self.linear_x 
-            cmd = Twist()
-            cmd.linear.x = self.linear_x
-            cmd.angular.z = self.angular_z
-            self.publisher_.publish(cmd)
-            self.get_logger().info('Speed: "%s" ----- Turn: "%s"' % (cmd.linear.x,cmd.angular.z))
+
+            # you need to store last value for both to use when you realse button
 
         def on_release(key):
             try:
                 self.current.remove(key)
+                if key == keyboard.Key.up or key == keyboard.Key.down:
+                    send_cmd(-0.4,90.0)
+                
+                if key == keyboard.Key.left or key == keyboard.Key.right:
+                    send_cmd(self.linear_x, 90.0)
             except KeyError:
                 pass
             
