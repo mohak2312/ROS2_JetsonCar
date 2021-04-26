@@ -5,14 +5,16 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='robosim',
-            node_namespace='Controller',
+            node_namespace='RoboSim',
             node_executable='talker',
-            output='screen'
+            #output='screen'
+            node_name='controller'
         ),
         Node(
             package='robosim',
-            node_namespace='JetsonCar',
+            node_namespace='RoboSim',
             node_executable='listener',
-            output='screen'
+            #output='screen'
+            node_name='rc_jcar'
         )
     ])
