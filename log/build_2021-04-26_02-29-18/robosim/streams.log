@@ -1,0 +1,20 @@
+[1.630s] Invoking command in '/home/mohak2312/ROS2_JetsonCar/src/robosim': PYTHONPATH=/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../build/robosim build --build-base /home/mohak2312/ROS2_JetsonCar/build/robosim/build install --prefix /home/mohak2312/ROS2_JetsonCar/install/robosim --record /home/mohak2312/ROS2_JetsonCar/build/robosim/install.log --single-version-externally-managed
+[2.841s] /home/mohak2312/.local/lib/python3.6/site-packages/setuptools/dist.py:645: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[2.842s]   % (opt, underscore_opt))
+[2.842s] /home/mohak2312/.local/lib/python3.6/site-packages/setuptools/dist.py:645: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead
+[2.843s]   % (opt, underscore_opt))
+[3.029s] running egg_info
+[3.032s] writing ../../build/robosim/robosim.egg-info/PKG-INFO
+[3.033s] writing dependency_links to ../../build/robosim/robosim.egg-info/dependency_links.txt
+[3.034s] writing entry points to ../../build/robosim/robosim.egg-info/entry_points.txt
+[3.035s] writing requirements to ../../build/robosim/robosim.egg-info/requires.txt
+[3.035s] writing top-level names to ../../build/robosim/robosim.egg-info/top_level.txt
+[3.249s] reading manifest file '../../build/robosim/robosim.egg-info/SOURCES.txt'
+[3.256s] writing manifest file '../../build/robosim/robosim.egg-info/SOURCES.txt'
+[3.257s] running build
+[3.258s] running build_py
+[3.259s] running install
+[3.261s] running install_lib
+[3.268s] running install_data
+[3.272s] error: can't copy 'robosim_launch.py': doesn't exist or not a regular file
+[3.365s] Invoked command in '/home/mohak2312/ROS2_JetsonCar/src/robosim' returned '1': PYTHONPATH=/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages: /usr/bin/python3 setup.py egg_info --egg-base ../../build/robosim build --build-base /home/mohak2312/ROS2_JetsonCar/build/robosim/build install --prefix /home/mohak2312/ROS2_JetsonCar/install/robosim --record /home/mohak2312/ROS2_JetsonCar/build/robosim/install.log --single-version-externally-managed
