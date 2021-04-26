@@ -27,18 +27,19 @@ class RobotSimulator(Node):
         self.kit=ServoKit(channels=16)
         self.kit.servo[0].angle = 90            # Nutral position
         time.sleep(1)
-        self.kit.continuous_servo[1].throttle = -0.42
+        #self.kit.continuous_servo[1].throttle = -0.4
         self.subscription = self.create_subscription(
             Twist,
             'jCar/cmd_vel',
             self.move_callback,
             10)
         self.subscription  # prevent unused variable warning
+        self.get_logger().info('|--------------- Start Listening (-_-) ---------------|')
 
     def move_callback(self, cmd):
-        if(-0.49<cmd.linear.x<-0.21 and 0<=cmd.angular.z<=180):
+        if(-0.5<cmd.linear.x<-0.04 and 0<=cmd.angular.z<=180):
             self.kit.servo[0].angle =cmd.angular.z           # Nutral position
-            time.sleep(1)
+            #time.sleep(1)
             self.kit.continuous_servo[1].throttle = cmd.linear.x
             #time.sleep(1)
             self.get_logger().info('Speed: "%s" ----- Turn: "%s"' % (cmd.linear.x,cmd.angular.z))
