@@ -1,0 +1,29 @@
+[5.096s] Invoking command in '/home/mohak2312/ROS2_JetsonCar/src/robosim': PYTHONPATH=/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robosim build --build-base /home/mohak2312/ROS2_JetsonCar/build/robosim/build install --prefix /home/mohak2312/ROS2_JetsonCar/install/robosim --record /home/mohak2312/ROS2_JetsonCar/build/robosim/install.log --single-version-externally-managed
+[7.843s] /home/mohak2312/.local/lib/python3.6/site-packages/setuptools/dist.py:645: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead
+[7.844s]   % (opt, underscore_opt))
+[7.844s] /home/mohak2312/.local/lib/python3.6/site-packages/setuptools/dist.py:645: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead
+[7.845s]   % (opt, underscore_opt))
+[8.059s] running egg_info
+[8.063s] writing ../../build/robosim/robosim.egg-info/PKG-INFO
+[8.064s] writing dependency_links to ../../build/robosim/robosim.egg-info/dependency_links.txt
+[8.065s] writing entry points to ../../build/robosim/robosim.egg-info/entry_points.txt
+[8.066s] writing requirements to ../../build/robosim/robosim.egg-info/requires.txt
+[8.067s] writing top-level names to ../../build/robosim/robosim.egg-info/top_level.txt
+[8.394s] reading manifest file '../../build/robosim/robosim.egg-info/SOURCES.txt'
+[8.401s] writing manifest file '../../build/robosim/robosim.egg-info/SOURCES.txt'
+[8.402s] running build
+[8.403s] running build_py
+[8.406s] copying robosim/robot_controller.py -> /home/mohak2312/ROS2_JetsonCar/build/robosim/build/lib/robosim
+[8.409s] running install
+[8.411s] running install_lib
+[8.417s] copying /home/mohak2312/ROS2_JetsonCar/build/robosim/build/lib/robosim/robot_controller.py -> /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim
+[8.476s] byte-compiling /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim/robot_controller.py to robot_controller.cpython-36.pyc
+[8.482s] running install_data
+[8.488s] running install_egg_info
+[8.511s] removing '/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim-0.0.0-py3.6.egg-info' (and everything under it)
+[8.513s] Copying ../../build/robosim/robosim.egg-info to /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim-0.0.0-py3.6.egg-info
+[8.525s] running install_scripts
+[8.696s] Installing listener script to /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/robosim
+[8.701s] Installing talker script to /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/robosim
+[8.703s] writing list of installed files to '/home/mohak2312/ROS2_JetsonCar/build/robosim/install.log'
+[8.832s] Invoked command in '/home/mohak2312/ROS2_JetsonCar/src/robosim' returned '0': PYTHONPATH=/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robosim build --build-base /home/mohak2312/ROS2_JetsonCar/build/robosim/build install --prefix /home/mohak2312/ROS2_JetsonCar/install/robosim --record /home/mohak2312/ROS2_JetsonCar/build/robosim/install.log --single-version-externally-managed

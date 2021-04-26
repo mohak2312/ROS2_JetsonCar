@@ -1,0 +1,67 @@
+[0.000000] (-) TimerEvent: {}
+[0.000548] (robosim) JobQueued: {'identifier': 'robosim', 'dependencies': OrderedDict()}
+[0.000733] (robosim) JobStarted: {'identifier': 'robosim'}
+[0.095697] (-) TimerEvent: {}
+[0.196668] (-) TimerEvent: {}
+[0.297418] (-) TimerEvent: {}
+[0.398157] (-) TimerEvent: {}
+[0.498903] (-) TimerEvent: {}
+[0.599583] (-) TimerEvent: {}
+[0.700314] (-) TimerEvent: {}
+[0.800995] (-) TimerEvent: {}
+[0.901663] (-) TimerEvent: {}
+[1.002334] (-) TimerEvent: {}
+[1.102992] (-) TimerEvent: {}
+[1.203712] (-) TimerEvent: {}
+[1.304474] (-) TimerEvent: {}
+[1.405214] (-) TimerEvent: {}
+[1.498676] (robosim) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../../build/robosim', 'build', '--build-base', '/home/mohak2312/ROS2_JetsonCar/build/robosim/build', 'install', '--prefix', '/home/mohak2312/ROS2_JetsonCar/install/robosim', '--record', '/home/mohak2312/ROS2_JetsonCar/build/robosim/install.log', '--single-version-externally-managed'], 'cwd': '/home/mohak2312/ROS2_JetsonCar/src/robosim', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'GTK_CSD': '0', 'USER': 'mohak2312', 'LANGUAGE': 'en_US', 'XDG_SEAT': 'seat0', 'SSH_AGENT_PID': '5968', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'HOME': '/home/mohak2312', 'OLDPWD': '/home/mohak2312', 'DESKTOP_SESSION': 'LXDE', 'GTK_MODULES': 'gail:atk-bridge', 'XDG_SEAT_PATH': '/org/freedesktop/DisplayManager/Seat0', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'MANDATORY_PATH': '/usr/share/gconf/ux-LXDE.mandatory.path', 'LOGNAME': 'mohak2312', '_': '/usr/bin/colcon', 'DEFAULTS_PATH': '/usr/share/gconf/ux-LXDE.default.path', 'XDG_SESSION_ID': 'c1', 'TERM': 'xterm-256color', 'SAL_USE_VCLPLUGIN': 'gtk', 'PATH': '/home/mohak2312/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'GDM_LANG': 'en_US', 'XDG_MENU_PREFIX': 'lxde-', 'XDG_RUNTIME_DIR': '/run/user/1000', 'XDG_SESSION_PATH': '/org/freedesktop/DisplayManager/Session0', 'DISPLAY': ':0.0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'LXDE', 'LD_PRELOAD': 'libgtk3-nocsd.so.0', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'XDG_CONFIG_HOME': '/home/mohak2312/.config', 'XDG_SESSION_DESKTOP': 'ux-LXDE', 'XAUTHORITY': '/home/mohak2312/.Xauthority', 'XDG_DATA_HOME': '/home/mohak2312/.local/share', 'SSH_AUTH_SOCK': '/tmp/ssh-u5plNLlfWUBf/agent.5850', 'XDG_GREETER_DATA_DIR': '/var/lib/lightdm-data/mohak2312', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ux-LXDE', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', '_LXSESSION_PID': '5850', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'XDG_VTNR': '7', 'PWD': '/home/mohak2312/ROS2_JetsonCar/build/robosim', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/usr/share/gdm:/var/lib/menu-xdg:/usr/local/share/:/usr/share/:/usr/share/gdm/:/var/lib/menu-xdg/', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ux-LXDE:/etc/xdg', 'COLCON': '1', 'VTE_VERSION': '5202', 'PYTHONPATH': '/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages:'}, 'shell': False}
+[1.507020] (-) TimerEvent: {}
+[1.611716] (-) TimerEvent: {}
+[1.712493] (-) TimerEvent: {}
+[1.813230] (-) TimerEvent: {}
+[1.913973] (-) TimerEvent: {}
+[2.014678] (-) TimerEvent: {}
+[2.115420] (-) TimerEvent: {}
+[2.216091] (-) TimerEvent: {}
+[2.316809] (-) TimerEvent: {}
+[2.417526] (-) TimerEvent: {}
+[2.518271] (-) TimerEvent: {}
+[2.618998] (-) TimerEvent: {}
+[2.701937] (robosim) StderrLine: {'line': b"/home/mohak2312/.local/lib/python3.6/site-packages/setuptools/dist.py:645: UserWarning: Usage of dash-separated 'script-dir' will not be supported in future versions. Please use the underscore name 'script_dir' instead\n"}
+[2.702831] (robosim) StderrLine: {'line': b'  % (opt, underscore_opt))\n'}
+[2.703308] (robosim) StderrLine: {'line': b"/home/mohak2312/.local/lib/python3.6/site-packages/setuptools/dist.py:645: UserWarning: Usage of dash-separated 'install-scripts' will not be supported in future versions. Please use the underscore name 'install_scripts' instead\n"}
+[2.703784] (robosim) StderrLine: {'line': b'  % (opt, underscore_opt))\n'}
+[2.719204] (-) TimerEvent: {}
+[2.819923] (-) TimerEvent: {}
+[2.871600] (robosim) StdoutLine: {'line': b'running egg_info\n'}
+[2.876144] (robosim) StdoutLine: {'line': b'writing ../../build/robosim/robosim.egg-info/PKG-INFO\n'}
+[2.877206] (robosim) StdoutLine: {'line': b'writing dependency_links to ../../build/robosim/robosim.egg-info/dependency_links.txt\n'}
+[2.877890] (robosim) StdoutLine: {'line': b'writing entry points to ../../build/robosim/robosim.egg-info/entry_points.txt\n'}
+[2.878574] (robosim) StdoutLine: {'line': b'writing requirements to ../../build/robosim/robosim.egg-info/requires.txt\n'}
+[2.879201] (robosim) StdoutLine: {'line': b'writing top-level names to ../../build/robosim/robosim.egg-info/top_level.txt\n'}
+[2.920086] (-) TimerEvent: {}
+[3.020869] (-) TimerEvent: {}
+[3.064720] (robosim) StdoutLine: {'line': b"reading manifest file '../../build/robosim/robosim.egg-info/SOURCES.txt'\n"}
+[3.070942] (robosim) StdoutLine: {'line': b"writing manifest file '../../build/robosim/robosim.egg-info/SOURCES.txt'\n"}
+[3.071775] (robosim) StdoutLine: {'line': b'running build\n'}
+[3.072429] (robosim) StdoutLine: {'line': b'running build_py\n'}
+[3.073256] (robosim) StdoutLine: {'line': b'copying robosim/robot_controller.py -> /home/mohak2312/ROS2_JetsonCar/build/robosim/build/lib/robosim\n'}
+[3.073870] (robosim) StdoutLine: {'line': b'running install\n'}
+[3.075494] (robosim) StdoutLine: {'line': b'running install_lib\n'}
+[3.078589] (robosim) StdoutLine: {'line': b'copying /home/mohak2312/ROS2_JetsonCar/build/robosim/build/lib/robosim/robot_controller.py -> /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim\n'}
+[3.080511] (robosim) StdoutLine: {'line': b'byte-compiling /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim/robot_controller.py to robot_controller.cpython-36.pyc\n'}
+[3.084217] (robosim) StdoutLine: {'line': b'running install_data\n'}
+[3.086804] (robosim) StdoutLine: {'line': b'running install_egg_info\n'}
+[3.093649] (robosim) StdoutLine: {'line': b"removing '/home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim-0.0.0-py3.6.egg-info' (and everything under it)\n"}
+[3.094868] (robosim) StdoutLine: {'line': b'Copying ../../build/robosim/robosim.egg-info to /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/python3.6/site-packages/robosim-0.0.0-py3.6.egg-info\n'}
+[3.098522] (robosim) StdoutLine: {'line': b'running install_scripts\n'}
+[3.121029] (-) TimerEvent: {}
+[3.181000] (robosim) StdoutLine: {'line': b'Installing listener script to /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/robosim\n'}
+[3.183220] (robosim) StdoutLine: {'line': b'Installing talker script to /home/mohak2312/ROS2_JetsonCar/install/robosim/lib/robosim\n'}
+[3.183814] (robosim) StdoutLine: {'line': b"writing list of installed files to '/home/mohak2312/ROS2_JetsonCar/build/robosim/install.log'\n"}
+[3.221305] (-) TimerEvent: {}
+[3.289327] (robosim) CommandEnded: {'returncode': 0}
+[3.321734] (-) TimerEvent: {}
+[3.353431] (robosim) JobEnded: {'identifier': 'robosim', 'rc': 0}
+[3.356999] (-) EventReactorShutdown: {}
