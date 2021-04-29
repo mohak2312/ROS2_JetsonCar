@@ -40,7 +40,7 @@ class RobotController(Node):
         timer_period = 0.5  # seconds
         self.timer = self.create_timer(timer_period, self.KeyboardReader)
         self.i = 0.0
-        self.linear_x= 0.0
+        self.linear_x= -0.4
         self.linear_y= 0.0
         self.angular_z= 0.0
         self.current=set()
@@ -69,7 +69,10 @@ class RobotController(Node):
                 if self.auto_hold_flag:
                     send_cmd(self.linear_x,90.0)
                 else:
-                    self.linear_x= -0.27
+                    if self.linear_x < -0.27:
+                        self.linear_x = -0.27
+                    elif self.linear_x < -0.25:
+                        self.linear_x += 0.005
                     send_cmd(self.linear_x,90.0)
                 goto .end
 
@@ -106,12 +109,22 @@ class RobotController(Node):
 
             if self.current == turn_left_forward:
                 self.reverse_flag=True
-                send_cmd(-0.27,180.0)
+                #send_cmd(-0.27,180.0)
+                if self.linear_x < -0.27:
+                    self.linear_x = -0.27
+                elif self.linear_x < -0.25:
+                    self.linear_x += 0.005
+                send_cmd(self.linear_x,180.0)
                 goto .end
             
             if self.current == turn_right_forward:
                 self.reverse_flag=True
-                send_cmd(-0.27,0.0)
+                #send_cmd(-0.27,0.0)
+                if self.linear_x < -0.27:
+                    self.linear_x = -0.27
+                elif self.linear_x < -0.25:
+                    self.linear_x += 0.005
+                send_cmd(self.linear_x,0.0)
                 goto .end
 
             if self.current == turn_left_reverse:
@@ -152,6 +165,7 @@ class RobotController(Node):
                 self.current.remove(key)
                 if key == keyboard.Key.up or key == keyboard.Key.down:
                     send_cmd(-0.4,90.0)
+                    self.linear_x = -0.4
                 
                 if key == keyboard.Key.left or key == keyboard.Key.right:
                     send_cmd(self.linear_x, 90.0)
