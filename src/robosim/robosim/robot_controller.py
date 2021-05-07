@@ -71,7 +71,7 @@ class RobotController(Node):
                 else:
                     if self.linear_x < -0.27:
                         self.linear_x = -0.27
-                    elif self.linear_x < -0.25:
+                    elif self.linear_x < -0.18:
                         self.linear_x += 0.005
                     send_cmd(self.linear_x,90.0)
                 goto .end
@@ -112,7 +112,7 @@ class RobotController(Node):
                 #send_cmd(-0.27,180.0)
                 if self.linear_x < -0.27:
                     self.linear_x = -0.27
-                elif self.linear_x < -0.25:
+                elif self.linear_x < -0.18:
                     self.linear_x += 0.005
                 send_cmd(self.linear_x,180.0)
                 goto .end
@@ -122,7 +122,7 @@ class RobotController(Node):
                 #send_cmd(-0.27,0.0)
                 if self.linear_x < -0.27:
                     self.linear_x = -0.27
-                elif self.linear_x < -0.25:
+                elif self.linear_x < -0.18:
                     self.linear_x += 0.005
                 send_cmd(self.linear_x,0.0)
                 goto .end
