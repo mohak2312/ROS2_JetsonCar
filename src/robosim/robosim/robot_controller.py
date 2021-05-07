@@ -17,7 +17,6 @@ from rclpy.node import Node
 
 from geometry_msgs.msg import Twist
 from pynput import keyboard
-from goto import with_goto
 import time
 
 #motion combinations
@@ -25,9 +24,9 @@ forward=set({keyboard.Key.up})
 reverse=set({keyboard.Key.down})
 left=set({keyboard.Key.left})
 right=set({keyboard.Key.right})
-speed_up = set({keyboard.Key.ctrl,keyboard.Key.up})
-speed_down = set({ keyboard.Key.ctrl,keyboard.Key.down})
-auto_speed_hold= set({keyboard.Key.space, keyboard.Key.ctrl,keyboard.Key.up})
+speed_up = set({keyboard.Key.ctrl_l,keyboard.Key.up})
+speed_down = set({ keyboard.Key.ctrl_l,keyboard.Key.down})
+auto_speed_hold= set({keyboard.Key.space, keyboard.Key.ctrl_l,keyboard.Key.up})
 turn_left_forward= set({keyboard.Key.left,keyboard.Key.up})
 turn_right_forward= set({keyboard.Key.right,keyboard.Key.up})
 turn_left_reverse= set({keyboard.Key.left, keyboard.Key.down})
@@ -59,10 +58,10 @@ class RobotController(Node):
             self.publisher_.publish(cmd)
             self.get_logger().info('Speed: "%s" ----- Turn: "%s"' % (cmd.linear.x,cmd.angular.z))
         
-        @with_goto
         def on_press(key):
             
             self.current.add(key)
+            #self.get_logger().info('"%s"'% self.current)
             
             if self.current == forward:
                 self.reverse_flag=True
@@ -73,61 +72,68 @@ class RobotController(Node):
                         self.linear_x = -0.27
                     elif self.linear_x < -0.18:
                         self.linear_x += 0.005
+                    #self.get_logger().info('forward')
                     send_cmd(self.linear_x,90.0)
-                goto .end
+                #return
 
-            if self.current == reverse:
+            elif self.current == reverse:
                 if  self.reverse_flag:
                     send_cmd(-0.47,90.0)
                     self.linear_x = -0.4
                     #time.sleep(1)
                 else:
                     if self.linear_x > -0.48:
-                        self.linear_x -= 0.005 
+                        self.linear_x -= 0.005
+                        self.get_logger().info('reverse') 
                         send_cmd(self.linear_x,90.0)
                     else:
+                        #self.get_logger().info('reverse')
                         send_cmd(self.linear_x,90.0)
                 self.reverse_flag=False
-                goto .end
+                #return
             
-            if self.current == speed_up:
+            elif self.current == speed_up:
                 self.linear_x += 0.005
+                #self.get_logger().info('speedup')
                 send_cmd(self.linear_x,90.0)
                 self.auto_hold_flag=False
-                goto .end
+                #return
 
-            if self.current == speed_down:
+            elif self.current == speed_down:
                 self.linear_x -= 0.005
+                #self.get_logger().info('speeddown')
                 send_cmd(self.linear_x,90.0)
                 self.auto_hold_flag=False
-                goto .end
+                #return
 
-            if self.current == auto_speed_hold:
+            elif self.current == auto_speed_hold:
                 send_cmd(self.linear_x,90.0)
                 self.auto_hold_flag=True
-                goto .end
+                #return
 
-            if self.current == turn_left_forward:
+            elif self.current == turn_left_forward:
                 self.reverse_flag=True
                 #send_cmd(-0.27,180.0)
                 if self.linear_x < -0.27:
                     self.linear_x = -0.27
                 elif self.linear_x < -0.18:
                     self.linear_x += 0.005
+                #self.get_logger().info('turn_left_forward')
                 send_cmd(self.linear_x,180.0)
-                goto .end
+                #return
             
-            if self.current == turn_right_forward:
+            elif self.current == turn_right_forward:
                 self.reverse_flag=True
                 #send_cmd(-0.27,0.0)
                 if self.linear_x < -0.27:
                     self.linear_x = -0.27
                 elif self.linear_x < -0.18:
                     self.linear_x += 0.005
+                #self.get_logger().info('turn_right_forward')
                 send_cmd(self.linear_x,0.0)
-                goto .end
+                #return
 
-            if self.current == turn_left_reverse:
+            elif self.current == turn_left_reverse:
                 if  self.reverse_flag:
                     send_cmd(-0.47,90.0)
                     self.linear_x = -0.4
@@ -139,9 +145,9 @@ class RobotController(Node):
                     else:
                         send_cmd(self.linear_x,180.0)
                 self.reverse_flag=False
-                goto .end
+                #return
             
-            if self.current == turn_right_reverse:
+            elif self.current == turn_right_reverse:
                 if  self.reverse_flag:
                     send_cmd(-0.47,90.0)
                     self.linear_x = -0.4
@@ -153,10 +159,8 @@ class RobotController(Node):
                     else:
                         send_cmd(self.linear_x,0.0)
                 self.reverse_flag=False
-                goto .end
+                #return
 
-
-            label .end
 
             # you need to store last value for both to use when you realse button
 
@@ -169,8 +173,13 @@ class RobotController(Node):
                 
                 if key == keyboard.Key.left or key == keyboard.Key.right:
                     send_cmd(self.linear_x, 90.0)
+                    
+                if key == keyboard.Key.esc:
+                    # Stop listener
+                    return False
             except KeyError:
                 pass
+                
             
         
         # Collect events until released
@@ -178,6 +187,7 @@ class RobotController(Node):
                 on_press=on_press,on_release=on_release) as listener:
             
             listener.join()
+        return False
 
 def main(args=None):
     rclpy.init(args=args)
