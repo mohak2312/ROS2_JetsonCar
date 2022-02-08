@@ -1,6 +1,8 @@
 # ROS2_JetsonCar
 Control RC car using jetson neno 2GB with ROS2
 
+![WhatsApp Video 2022-02-07 at 4 10 06 PM (2)](https://user-images.githubusercontent.com/18558942/152900571-91fea270-e74a-4a47-9eed-bcd4d8aea172.gif)
+![WhatsApp Image 2022-02-07 at 4 07 43 PM](https://user-images.githubusercontent.com/18558942/152900590-44ff3fbd-4322-4aed-a046-7b451a6162d5.jpeg)
 
 **Problem faced**
 
